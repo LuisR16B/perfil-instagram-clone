@@ -1,0 +1,45 @@
+@mixin background()
+  background-color: #000000
+
+@mixin flex($gap, $direccion, $justify, $align)
+  display: flex
+  gap: $gap
+  flex-direction: $direccion
+  @if $justify != none
+    justify-content: $justify
+  @if $align != none
+    align-items: $align
+
+@mixin grid($columns, $rows, $justify, $align)
+  display: grid
+  @if $columns != none
+    grid-template-columns: $columns
+  @if $rows != none
+    grid-template-rows: $rows
+  @if $justify != none
+    justify-items: $justify
+  @if $justify != none
+    justify-items: $justify
+  @if $align != none
+    align-items: $align
+
+@mixin font($font-size)
+  font-size: $font-size
+
+@mixin botones($b-radius)
+  background-color: #363636
+  border: 0
+  padding: 8px
+  border-radius: $b-radius
+
+*
+  margin: 0
+  padding: 0
+  color: white
+  font-family: "Roboto", system-ui
+  font-weight: 400
+  font-style: normal
+
+body
+  @include background()
+  @include font(13px)

@@ -1,0 +1,47 @@
+@import './_header.sass'
+
+.nav-publicaciones
+  @include grid(repeat(3, 1fr), none, center, center)
+  div
+    width: 100%
+    input
+      display: none
+    label
+      padding: 10px 0
+      width: 100%
+      @include flex(0, row, center, none)
+      cursor: pointer
+    input:checked + label
+      border-top: 1px solid white
+
+.puplicaciones
+  @include grid(repeat(3, 1fr), none, center, center)
+  gap: 2px
+  div
+    position: relative
+    overflow: hidden
+    img
+      width: 100%
+    .hover-informacion
+      display: none
+      div
+        @include flex(8px, row, none, none)
+  div:hover
+    .hover-informacion
+      background-color: rgba(0, 0, 0, 0.5)
+      @include flex(0, column, center, center)
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      cursor: pointer
+
+@media only screen and (min-width: 768px)
+  main
+    @include flex(8px, row-reverse, none, none)
+  .puplicaciones
+    div:hover
+      .hover-informacion
+        @include flex(10px, row, center, center)
+  #reels
+    @include grid(repeat(4, 1fr), none, center, center)

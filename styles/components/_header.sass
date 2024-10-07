@@ -1,0 +1,94 @@
+.opciones-perfil
+  @include flex(20px, row, none, none)
+  margin: 20px 15px
+  .div-usuario-btn
+    @include flex(10px, column, none, none)
+  .div-usuario
+    @include flex(10px, row, none, center)
+    h3
+      cursor: pointer
+    svg
+      cursor: pointer
+  .div-img
+    img
+      width: 77px
+      border-radius: 100%
+
+.informacion-perfil
+  padding: 0px 15px
+  @include flex(5px, column, none, none)
+  cursor: default
+  button
+    @include botones(20px)
+    font-weight:300
+    cursor: pointer
+  .categoria
+    color: #A8A8A8
+  .informacion-perfil-768px
+    display: none
+
+.div-btn
+  @include flex(5px, row, none, center)
+  button
+    @include botones(5px)
+    font-weight:300
+    cursor: pointer
+
+.historias-destacadas
+  @include flex(8px, row, none, none)
+  overflow-x: auto
+  padding: 30px 5px
+  cursor: pointer
+  div
+    @include flex(5px, column, none, center)
+  img
+    border-radius: 100%
+    width: 56px
+  h4
+    font-weight:400
+
+.historias-destacadas::-webkit-scrollbar
+  display: none
+
+.informacion-seguidores
+  padding: 10px 0
+  @include grid(1fr 1fr 1fr, none, center, center)
+  border-top: 0.5px solid #363636
+  border-bottom: 0.5px solid #363636
+  cursor: default
+  div
+    @include flex(0, column, none, center)
+    p
+      color: #98A8A8
+
+@media only screen and (min-width: 768px)
+  header
+    margin: 0 10px
+  .div-principal
+    @include flex(0, row, none, center)
+    padding-top: 30px
+    .div-usuario-btn
+      display: none
+    .opciones-perfil
+      .div-img
+        img
+          width: 150px
+  .informacion-perfil
+    .informacion-perfil-768px
+      display: block
+      .informacion-seguidores-768px
+        @include flex(40px, row, none, none)
+        padding: 20px 0
+        @include font(15px)
+  .historias-destacadas
+    @include flex(20px, row, none, none)
+    img
+      width: 77px
+  .informacion-seguidores
+    display: none
+
+@media only screen and (min-width: 992px)
+  header
+    margin: 0 50px
+
+@media only screen and (min-width: 1200px)

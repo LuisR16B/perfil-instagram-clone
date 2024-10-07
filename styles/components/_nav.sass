@@ -1,0 +1,13 @@
+nav
+  @include background()
+  @include grid(10% 90%, none, center, center)
+  @include font(10px)
+  position: sticky
+  top: 0
+  z-index: 2020
+  border-bottom: 0.5px solid #363636
+  padding: 5px
+
+@media only screen and (min-width: 768px) 
+  nav
+    display: none
