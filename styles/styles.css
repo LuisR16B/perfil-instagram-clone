@@ -290,6 +290,9 @@ nav {
 .barra .barra-768px {
   display: none;
 }
+.barra .barra-768px .logo-instagram2 {
+  display: none;
+}
 .barra .barra-mobile {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -313,12 +316,17 @@ nav {
   border-radius: 100%;
 }
 
+.barra-pc p {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .barra {
     display: grid;
     grid-template-rows: 15% 55% 30%;
     top: 0;
     height: 100vh;
+    min-height: 600px;
     border-right: 1px solid #363636;
     padding: 0;
     width: 60px;
@@ -342,16 +350,16 @@ nav {
     display: none;
   }
   .barra .barra-mobile .busqueda-768px {
-    display: block;
+    display: flex;
   }
   .barra .barra-mobile .corazon-768px {
-    display: block;
+    display: flex;
   }
   .barra .barra-mobile .chat-768px {
-    display: block;
+    display: flex;
   }
   .barra .barra-mobile .nueva-publicacion-768px {
-    display: block;
+    display: flex;
   }
   .barra .barra-bottom {
     justify-content: flex-end;
@@ -359,6 +367,36 @@ nav {
 }
 @media only screen and (min-width: 1200px) {
   .barra {
+    display: grid;
+    grid-template-rows: 15% 55% 30%;
+    justify-items: left;
+    justify-items: left;
+    padding-left: 30px;
     width: 250px;
+  }
+  .barra .barra-mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: left;
+    justify-items: left;
+  }
+  .barra .barra-768px {
+    align-items: flex-start;
+  }
+  .barra .barra-768px .logo-instagram {
+    display: none;
+  }
+  .barra .barra-768px .logo-instagram2 {
+    display: block;
+  }
+  .barra-pc {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+  }
+  .barra-pc p {
+    display: block;
   }
 }/*# sourceMappingURL=styles.css.map */

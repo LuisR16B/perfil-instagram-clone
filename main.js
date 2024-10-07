@@ -53,6 +53,16 @@ let guardandoReels = [
   new tarjeta('./videos/reels6.mp4','', '77', '0')
 ];
 
+let generarTarjetasEtiqueta;
+let guardandoEtiqueta = [
+  new tarjeta('./imagenes/publicaciones etiqueta/portadavideo1.png','programacion web', '3', '0'),
+  new tarjeta('./imagenes/publicaciones etiqueta/portadavideo2.png','curso de programacion web', '16', '0'),
+  new tarjeta('./imagenes/publicaciones etiqueta/portadavideo3.png','consumo de api', '15', '0'),
+  new tarjeta('./imagenes/publicaciones etiqueta/portadavideo4.png','curso programacion web', '15', '2'),
+  new tarjeta('./imagenes/publicaciones etiqueta/portadavideo5.png','clone youtube', '2', '0'),
+  new tarjeta('./imagenes/publicaciones etiqueta/portadapost1.png','ciencie', '21', '2')
+];
+
 function iniciar() {
   reels.style.display = 'None'
   etiquetas.style.display = 'None'
@@ -65,6 +75,7 @@ function iniciar() {
   generarHistoria()
   generarPost()
   generarReels()
+  generarEtiquetas()
 }
 
 function verPostFunction() {
@@ -145,6 +156,27 @@ function generarReels() {
       </div>
     `
     reels.innerHTML += generarTarjetasReels;
+  });
+}
+
+function generarEtiquetas() {
+  guardandoEtiqueta.forEach((informacion) => {
+    generarTarjetasEtiqueta = `
+      <div>
+        <img src="${informacion.link}" alt="${informacion.titulo}"  width="56px">
+        <div class="hover-informacion">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
+            <p>${informacion.meGusta}</p>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-400h480v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM880-80 720-240H160q-33 0-56.5-23.5T80-320v-480q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v720ZM160-320h594l46 45v-525H160v480Zm0 0v-480 480Z"/></svg>
+            <p>${informacion.comentarios}</p>
+          </div>
+        </div>
+      </div>
+    `
+    etiquetas.innerHTML += generarTarjetasEtiqueta;
   });
 }
 

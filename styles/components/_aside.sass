@@ -6,6 +6,8 @@
   padding: 10px
   .barra-768px
     display: none
+    .logo-instagram2
+      display: none
   .barra-mobile
     @include grid(repeat(6, 1fr), none, center, center)
     .busqueda-768px
@@ -19,11 +21,16 @@
   img
     border-radius: 100%
 
+.barra-pc
+  p
+    display: none
+
 @media only screen and (min-width: 768px)
   .barra
     @include grid(none, 15% 55% 30%, none, none)
     top: 0
     height: 100vh
+    min-height: 600px
     border-right: 1px solid #363636
     padding: 0
     width: 60px
@@ -37,16 +44,31 @@
       .nueva-publicacion-mobile
         display: none
       .busqueda-768px
-        display: block
+        display: flex
       .corazon-768px
-        display: block
+        display: flex
       .chat-768px
-        display: block
+        display: flex
       .nueva-publicacion-768px
-        display: block
+        display: flex
     .barra-bottom
       justify-content: flex-end
 
 @media only screen and (min-width: 1200px)
   .barra
+    @include grid(none, 15% 55% 30%, left, none)
+    padding-left: 30px
     width: 250px
+    .barra-mobile
+      @include grid(1fr, none, left, none)
+    .barra-768px
+      align-items: flex-start
+      .logo-instagram
+        display: none
+      .logo-instagram2
+        display: block
+  .barra-pc
+    @include flex(20px, row, none, center)
+    @include font(15px)
+    p
+      display: block
