@@ -51,6 +51,8 @@
   #reels
     @include grid(repeat(4, 1fr), none, center, center)
 
-@media only screen and (min-width: 992px)
-  header
-    padding: 0 70px
+@media only screen and (min-width: 1200px)
+  main
+    @include grid(20% 80%, none, none, none)
+    header
+      padding: 0 70px

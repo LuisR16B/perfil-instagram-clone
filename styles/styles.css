@@ -271,8 +271,12 @@ nav {
     align-items: center;
   }
 }
-@media only screen and (min-width: 992px) {
-  header {
+@media only screen and (min-width: 1200px) {
+  main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  main header {
     padding: 0 70px;
   }
 }
@@ -351,5 +355,10 @@ nav {
   }
   .barra .barra-bottom {
     justify-content: flex-end;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .barra {
+    width: 250px;
   }
 }/*# sourceMappingURL=styles.css.map */
