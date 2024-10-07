@@ -85,7 +85,7 @@ nav {
 
 .div-btn {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   flex-direction: row;
   align-items: center;
 }
