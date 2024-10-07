@@ -38,10 +38,19 @@
 
 @media only screen and (min-width: 768px)
   main
-    @include flex(8px, row-reverse, none, none)
+    @include grid(10% 90%, none, none, none)
+    header
+      order: 2
+      padding: 0 58px
+    aside
+      order: 1
   .puplicaciones
     div:hover
       .hover-informacion
         @include flex(10px, row, center, center)
   #reels
     @include grid(repeat(4, 1fr), none, center, center)
+
+@media only screen and (min-width: 992px)
+  header
+    padding: 0 70px

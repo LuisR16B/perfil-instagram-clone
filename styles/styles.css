@@ -146,9 +146,6 @@ nav {
 }
 
 @media only screen and (min-width: 768px) {
-  header {
-    margin: 0 10px;
-  }
   .div-principal {
     display: flex;
     gap: 0;
@@ -182,11 +179,6 @@ nav {
   }
   .informacion-seguidores {
     display: none;
-  }
-}
-@media only screen and (min-width: 992px) {
-  header {
-    margin: 0 50px;
   }
 }
 .nav-publicaciones {
@@ -254,9 +246,15 @@ nav {
 
 @media only screen and (min-width: 768px) {
   main {
-    display: flex;
-    gap: 8px;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: 10% 90%;
+  }
+  main header {
+    order: 2;
+    padding: 0 58px;
+  }
+  main aside {
+    order: 1;
   }
   .puplicaciones div:hover .hover-informacion {
     display: flex;
@@ -271,6 +269,11 @@ nav {
     justify-items: center;
     justify-items: center;
     align-items: center;
+  }
+}
+@media only screen and (min-width: 992px) {
+  header {
+    padding: 0 70px;
   }
 }
 .barra {
@@ -313,7 +316,8 @@ nav {
     top: 0;
     height: 100vh;
     border-right: 1px solid #363636;
-    padding: 0 20px;
+    padding: 0;
+    width: 60px;
   }
   .barra .barra-768px {
     display: flex;
