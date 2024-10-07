@@ -47,7 +47,7 @@ let generarTarjetasReels;
 let guardandoReels = [
   new tarjeta('./videos/reels1.mp4'),
   new tarjeta('./videos/reels2.mp4'),
-  new tarjeta('../videos/reels3.mp4'),
+  new tarjeta('./videos/reels3.mp4'),
   new tarjeta('./videos/reels4.mp4'),
   new tarjeta('./videos/reels5.mp4'),
   new tarjeta('./videos/reels6.mp4')
